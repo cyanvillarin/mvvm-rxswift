@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  mvvm-rxswift
 //
 //  Created by CYAN on 9/26/20.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
    override func viewDidLoad() {
       super.viewDidLoad()
-      // Do any additional setup after loading the view.
    }
 
 
