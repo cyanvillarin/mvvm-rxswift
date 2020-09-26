@@ -53,7 +53,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addBlurArea(area: self.view.frame, style: .dark)
         setupBindings()
         homeViewModel.requestData()
     }

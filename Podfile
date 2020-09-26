@@ -9,6 +9,7 @@ target 'mvvm-rxswift' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SwiftyJSON'
+  pod 'NVActivityIndicatorView'
 
   target 'mvvm-rxswiftTests' do
     inherit! :search_paths
