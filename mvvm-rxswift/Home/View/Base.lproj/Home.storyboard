@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeViewController" customModule="mvvm_rxswift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdp-hH-SEY">
+                                <rect key="frame" x="20" y="64" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2O-rB-2gK">
+                                <rect key="frame" x="20" y="295" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YbG-C9-faJ">
+                                <rect key="frame" x="0.0" y="105" width="414" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="6ik-Fj-BKz"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="KBg-YD-QTD" kind="embed" id="OSD-nk-SLD"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHY-bq-7dg">
+                                <rect key="frame" x="0.0" y="336" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="uEv-Bh-1ZE"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="vNG-ac-1lt" kind="embed" id="h3a-Vh-uEY"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="k2O-rB-2gK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0YG-rF-YmU"/>
+                            <constraint firstItem="bdp-hH-SEY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UPK-CH-FCx"/>
+                            <constraint firstItem="ZHY-bq-7dg" firstAttribute="top" secondItem="k2O-rB-2gK" secondAttribute="bottom" constant="20" id="VEx-3W-AEL"/>
+                            <constraint firstItem="ZHY-bq-7dg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XKn-sP-euF"/>
+                            <constraint firstItem="YbG-C9-faJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZhH-oB-TSe"/>
+                            <constraint firstItem="YbG-C9-faJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="f4Z-CT-Id5"/>
+                            <constraint firstItem="bdp-hH-SEY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="j14-Kf-Szj"/>
+                            <constraint firstItem="YbG-C9-faJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mqf-on-BLz"/>
+                            <constraint firstItem="ZHY-bq-7dg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="taA-dx-qZN"/>
+                            <constraint firstItem="YbG-C9-faJ" firstAttribute="top" secondItem="bdp-hH-SEY" secondAttribute="bottom" constant="20" id="xMQ-s5-ygT"/>
+                            <constraint firstItem="k2O-rB-2gK" firstAttribute="top" secondItem="YbG-C9-faJ" secondAttribute="bottom" constant="20" id="yEO-1e-nq0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="albumsVCView" destination="YbG-C9-faJ" id="qik-ao-Mt8"/>
+                        <outlet property="tracksVCView" destination="ZHY-bq-7dg" id="FAr-wu-0I2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269.56521739130437" y="132.58928571428572"/>
+        </scene>
+        <!--Albums Collection View Controller-->
+        <scene sceneID="Y1F-ji-IAc">
+            <objects>
+                <viewController storyboardIdentifier="AlbumsCollectionViewController" id="KBg-YD-QTD" customClass="AlbumsCollectionViewController" customModule="mvvm_rxswift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iNZ-TC-Rhb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-h8-EwS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="170"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="9KA-vS-L0M">
+                                    <size key="itemSize" width="130" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cZc-h8-EwS" firstAttribute="leading" secondItem="iNZ-TC-Rhb" secondAttribute="leading" id="GMt-na-85X"/>
+                            <constraint firstAttribute="bottom" secondItem="cZc-h8-EwS" secondAttribute="bottom" id="NUW-2B-nFj"/>
+                            <constraint firstItem="cZc-h8-EwS" firstAttribute="top" secondItem="iNZ-TC-Rhb" secondAttribute="top" id="Z3q-iT-u2z"/>
+                            <constraint firstAttribute="trailing" secondItem="cZc-h8-EwS" secondAttribute="trailing" id="k3H-WR-384"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumsCollectionView" destination="cZc-h8-EwS" id="PDc-dR-xzj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eu-UZ-WM0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="-49"/>
+        </scene>
+        <!--Tracks Table View Controller-->
+        <scene sceneID="BAI-us-R2R">
+            <objects>
+                <viewController storyboardIdentifier="TracksTableViewController" id="vNG-ac-1lt" customClass="TracksTableViewController" customModule="mvvm_rxswift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DaN-xp-57R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" estimatedRowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BtP-r7-f01">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BtP-r7-f01" firstAttribute="top" secondItem="DaN-xp-57R" secondAttribute="top" id="5aK-kC-AfL"/>
+                            <constraint firstItem="BtP-r7-f01" firstAttribute="leading" secondItem="DaN-xp-57R" secondAttribute="leading" id="BNx-d9-RdP"/>
+                            <constraint firstAttribute="bottom" secondItem="BtP-r7-f01" secondAttribute="bottom" id="KKQ-MO-FvT"/>
+                            <constraint firstAttribute="trailing" secondItem="BtP-r7-f01" secondAttribute="trailing" id="Zjl-fe-l4W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tracksTableView" destination="BtP-r7-f01" id="ko1-5k-RDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ki-7I-Kf9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="266"/>
+        </scene>
+    </scenes>
+</document>
